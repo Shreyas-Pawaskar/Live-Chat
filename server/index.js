@@ -28,7 +28,11 @@ app.use("/uploads/files", express.static("uploads/files"));
 
 app.use(cookieParser());
 app.use(express.json());
-
+app.get('/test', (req, res) => {
+    res.send('Hello, World!');
+    console.log('-----------------Test api---------------------');
+    
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactsRoutes);
 app.use("/api/messages", messagesRoutes);

@@ -43,6 +43,7 @@ export const signup = async (req, res, next) => {
 
 export const login = async (req, res, next) => {
   try {
+    console.log('------------------Inside Login API-------------------');
     const { email, password } = req.body;
     if (email && password) {
       const user = await User.findOne({ email });
