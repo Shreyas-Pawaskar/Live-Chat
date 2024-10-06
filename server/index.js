@@ -28,6 +28,10 @@ app.use("/uploads/files", express.static("uploads/files"));
 
 app.use(cookieParser());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Hello, World -----------!');
+});
+
 app.get('/test', (req, res) => {
     res.send('Hello, World!');
     console.log('-----------------Test api---------------------');
